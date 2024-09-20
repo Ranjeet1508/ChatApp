@@ -68,7 +68,7 @@ userRouter.post('/setAvatar/:id', async(req,res) => {
 userRouter.get("/allusers/:id", async(req, res) => {
     try {
         const users = await userModel.find({_id:{$ne:req.params.id}}).select([
-            "email", "name", "avatarImage", "_id"
+            "email", "name", "_id"
         ])
         console.log(users);
         return res.send(users);

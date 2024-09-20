@@ -14,7 +14,7 @@ app.use(cors());
 app.use(express.json());
 
 
-app.use("/users", userRouter)
+app.use("/user", userRouter)
 app.use("/messages", messageRouter )
 
 const server = app.listen(PORT, async() => {
